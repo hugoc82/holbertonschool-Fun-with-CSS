@@ -1,0 +1,56 @@
+ul{
+    display: flex;
+    list-style: none;
+}
+.icon {
+  display:none ;
+}
+
+/* Positionner chaque logo dans le sprite */
+.i-html {
+  background-position: 0 0;
+}
+
+.i-css {
+  background-position: -286px 0;
+}
+
+.i-js {
+  background-position: -572px 0;
+}
+
+li {
+  display: inline-block;
+  width: 286px;
+  height: 375px;
+  border: 3px solid rgb(89, 89, 89);
+  background-image: url('./d416199ca6ecdbd0f8a3.png');
+  background-repeat: no-repeat;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color:black; 
+  position: relative;
+  vertical-align: top;
+  padding-top: 10px; 
+  box-sizing: border-box;
+  margin-right: 20px;
+  border-radius: 15px;
+}
+
+.icon {
+  display: none;
+}
+
+
+li:nth-child(1) {
+  background-position: 0 0;
+}
+
+li:nth-child(2) {
+  background-position: -286px 0;
+}
+
+li:nth-child(3) {
+  background-position: -572px 0;
+}
