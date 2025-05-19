@@ -1,0 +1,109 @@
+.toggle {
+  display: inline-block;
+  position: relative;
+  width: 110px;
+  height: 40px;
+  user-select: none;
+}
+
+.toggle-cb {
+  display: none;
+}
+
+.toggle-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: #ddd;
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #bbb;
+  text-align: center;
+  padding: 50 0px 50 0px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-label .toggle-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+  pointer-events: none;
+}
+
+.toggle-label .toggle-inner::before,
+.toggle-label .toggle-inner::after {
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.toggle-label .toggle-inner::before {
+  content: "No";
+  left: 0;
+}
+
+.toggle-label .toggle-inner::after {
+  content: "Yes";
+  right: 0;
+}
+
+.toggle-label .toggle-switch {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background: white;
+  border-radius: 50%;
+  border: solid 2px gray;
+}
+
+.toggle-cb:checked + .toggle-label {
+  background-color: #d8003f;
+  color: white;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-switch {
+  left: 67px;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner::before {
+  color: white;
+}
+
+.toggle-cb:not(:checked) + .toggle-label .toggle-inner::after {
+  color: #bbb;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner::after {
+  color: white;
+}
+
+.toggle-cb:not(:checked) + .toggle-label .toggle-inner::before {
+  color: #bbb;
+}
+
+/* Adjust text position */
+.toggle-label .toggle-inner {
+  width: 100%;
+}
+
+.toggle-label .toggle-inner::before {
+  left: 25%;
+}
+
+.toggle-label .toggle-inner::after {
+  right: 25%;
+}

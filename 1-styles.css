@@ -1,0 +1,21 @@
+a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  color: #A6677B;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px; 
+  width: 0;
+  background-color: currentColor;
+  transition: width 0.5s ease;
+}
+
+a:hover::after {
+  width: 100%; 
+}
